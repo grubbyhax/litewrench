@@ -1,0 +1,24 @@
+<?php $this->section('main'); ?>
+<h2>Step 2.</h2>
+<p>Set your master installation account username and password. This accout will give you access to all database commands within the system. You will need to remember these so record them somewhere safe.</p>
+<?php echo $form->open()->build(); ?>
+<?php echo $form->input('step')->build(); ?>
+<table class="formtable">
+	<tr class="stretch-2">
+<td class="text-r"><?php echo $form->label('username', 'Master Account Username')->build(); ?></td>
+<td><?php echo $form->error('username', 'b')->build(); echo $form->input('username')->attribute('class', 'span-3')->build(); ?></td>
+	</tr>
+	<tr class="stretch-2">
+<td class="text-r"><?php echo $form->label('password', 'Master Account Password')->build(); ?></td>
+<td><?php echo $form->error('password', 'b')->build(); echo $form->input('password')->attribute('class', 'span-3')->build(); ?></td>
+	</tr>
+	<tr class="stretch-2">
+<td class="text-r"><?php echo $form->label('confirm', 'Confirm Account Password')->build(); ?></td>
+<td><?php echo $form->error('confirm', 'b')->build(); echo $form->input('confirm')->attribute('class', 'span-3')->build(); ?></td>
+	</tr>
+	<tr class="stretch-2">
+<td colspan="2" class="text-c"><?php echo $form->submit('Continue')->attribute('class', 'button')->attribute('title', 'Next Step')->build(); ?></td>
+	</tr>
+</table>
+<?php echo $form->close()->build(); ?>
+<?php $this->section(); ?>

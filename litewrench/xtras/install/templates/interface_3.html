@@ -1,0 +1,32 @@
+<?php $this->section('main'); ?>
+<h2>Step 3.</h2>
+<p>Please enter the publishing details of your installation. Note that none of these details are recorded externally, they simply provide global values for use within the system.</p>
+<?php echo $form->open()->build(); ?>
+<?php echo $form->input('step')->build(); ?>
+<table class="formtable">
+	<tr class="stretch-2">
+<td class="text-r"><?php echo $form->label('organisation', 'Organisation')->build(); ?></td>
+<td><?php echo $form->error('organisation', 'b')->build(); echo $form->input('organisation')->attribute('class', 'span-4')->build(); ?></td>
+	</tr>
+	<tr class="stretch-2">
+<td class="text-r"><?php echo $form->label('domain', 'Domain Name')->build(); ?></td>
+<td><?php echo $form->error('domain', 'b')->build(); echo $form->input('domain')->attribute('class', 'span-4')->build(); ?></td>
+	</tr>
+	<tr class="stretch-2">
+<td class="text-r"><?php echo $form->label('email', 'Contact Email')->build(); ?></td>
+<td><?php echo $form->error('email', 'b')->build(); echo $form->input('email')->attribute('class', 'span-4')->build(); ?></td>
+	</tr>
+	<tr class="stretch-2">
+<td class="text-r"><?php echo $form->label('version', 'Install Version')->build(); ?></td>
+<td><?php echo $form->error('version', 'b')->build(); echo $form->input('version')->attribute('class', 'span-2')->build(); ?></td>
+	</tr>
+	<tr class="stretch-2">
+<td class="text-r"><?php echo $form->label('timezone', 'Hosted Timezone')->build(); ?></td>
+<td><?php echo $form->error('timezone', 'b')->build(); echo $form->input('timezone')->attribute('class', 'span-4')->build(); ?></td>
+	</tr>
+	<tr class="stretch-2">
+<td colspan="2" class="text-c"><?php echo $form->submit('Continue')->attribute('class', 'button')->attribute('title', 'Next Step')->build(); ?></td>
+	</tr>
+</table>
+<?php echo $form->close()->build(); ?>
+<?php $this->section(); ?>

@@ -1,0 +1,41 @@
+This is the notes documentation to get the lite framework in order.
+
+CHANGELOG FULL VERSION
+- copy acrross form object and test(swap in GLB_FOREMAN).
+- need to do radio buttons as the next step to getting the notice form built.
+	- put in th javascript to handle the radio buttons in the same way as the checkboxes
+
+I've changed some of the framework model database configurations and values so do a reinstall of the framework.
+
+
+Shortlist of tasks:
+
+IMMEDIATE:
+MUST MOVE THE APIU MODIFICATIONS TO THE PLAN->BIND->BUILD ROUTINES INTO THE FULL SYSTEM BECAUSE THEY ARE GOOD
+	- the plan use plugin variable is going to call up a plugin object to do the build
+	- the override file path is alos going to pull up a plugin object to make the build execution.
+
+-I need to be up and developing the application so:
+	- save and load model functions need to be tested
+	- form validation and model binding needs to be confirmed as working.
+
+-Need to figure out the basic routing, what are we going to hit as the primary logic control point?
+	- MUST TEST THE REGEX. I SHOULD APPLY THE WRAPPER COMMANDS SUCH AS () +?
+	- must also make sure that the regex matches are tested against the start of the uri string
+-I'm going to gut all the DOM Document functions out of this framework and keep it to a db style of data storage with themes + locales.
+	- Got to move the builder functions and the pluin functions into the command object
+
+- Need to be able to set headers in the command object so that I can send PDF files.
+	- This will also help for outputting files.
+
+
+<?php $this->inherit('layout'); ?>
+<?php $this->section('name'); ?>
+
+<?php $this->section($var=false); ?>
+
+
+<?php $this->locale(); ?>
+
+<?php $this->module('name', $Arr_Params); ?>
+

@@ -1,0 +1,11 @@
+<?php $this->section('main'); ?>
+<h2>Installation complete, well maybe.</h2>
+<p>Here you can choose options where to go next.</p>
+
+<h3>Installation Results</h3>
+<?php if (isset($extras['results'])){echo $extras['results'];} ?>
+
+<h3>What next?</h3>
+<p>First you need to remove the install.php from the monkeywrench directory on your server. You can explore the <a href="#" title="monkeywrench system documentation">system documentation</a> or join the discussion online(Yeah right, this is pretty hopefull, what year is it?).</p>
+
+<?php $this->section(); ?>
